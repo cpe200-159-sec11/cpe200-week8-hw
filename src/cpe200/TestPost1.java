@@ -36,6 +36,9 @@ public class TestPost1 {
 
         // display news feed before comments
         f1.displayFeed();
+        f1.getPost(1).display();
+        f1.getPost(2).display();
+        f1.getPost(3).display();
 
         f1.getPost(1).addComment("facebook for work!!! seriously!!!"); f1.getPost(1).addlike();
         f1.getPost(1).addComment("My company doesn't allow to use facebook 5555.");
@@ -51,9 +54,11 @@ public class TestPost1 {
         f1.getPost(2).display();
 
         f1.getPost(3).addlike(); f1.getPost(3).addlike(); f1.getPost(3).addlike();
-
         // display news feed after adding comments
         f1.displayFeed();
+        f1.getPost(1).display();
+        f1.getPost(2).display();
+        f1.getPost(3).display();
 
         // Add post to f2 news feed
         f2.addPost(new PhotoPost("Mike Gerrard (BBC)","cherokee.png",
@@ -66,6 +71,11 @@ public class TestPost1 {
 
         // display news feed before adding comments
         f2.displayFeed();
+        f2.getPost(1).display();
+        f2.getPost(2).display();
+        f2.getPost(3).display();
+        f2.getPost(4).display();
+        f2.getPost(5).display();
 
         f2.getPost(4).addlike(); f2.getPost(2).addlike();
         f2.getPost(1).addComment("really like walkabout along the river");
@@ -74,5 +84,10 @@ public class TestPost1 {
 
         // display news feed after adding comments
         f2.displayFeed();
+        f2.getPost(1).display();
+        f2.getPost(2).display();
+        f2.getPost(3).display();
+        f2.getPost(4).display();
+        f2.getPost(5).display();
     }
 }
