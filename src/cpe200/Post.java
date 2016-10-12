@@ -8,36 +8,55 @@ public class Post {
     protected LocalDateTime timestamp;
     protected int likes;
     protected ArrayList<String> comments;
+    protected int Photo=0;
 
     public Post() {
         this("anonymous");
     }
 
     public Post(String u) {
-
+        if(isValidateUsername(u)) {
+            this.username = u;
+        }else
+        {
+            this.username = "anonymous";
+        }
+        this.timestamp = LocalDateTime.now();
+        this.likes =0;
+        comments = new ArrayList<String>();
     }
 
     public boolean addComment(String c) {
-
-        return false;
+        if(isValidateComment(c)) {
+            comments.add(c);
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public void addlike() {
-
+        this.likes++;
     }
 
     public boolean removeComment(String c) {
+        for(int i=0;i<comments.size();i++)
+        {
+            if(c == comments.get(i))
+            {
+                comments.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
     public ArrayList<String> getComments() {
-
         return null;
     }
 
     private boolean isValidateUsername(String u) {
-
-        return false;
+        return (u==null||u.equalsIgnoreCase(""))?false:true;
     }
 
     protected boolean isValidateComment(String c) {
@@ -45,9 +64,19 @@ public class Post {
     }
 
     public void display() {
-
+        System.out.println(username + " (posted: " + timestamp + ")");
+        System.out.println(likes + " people like this.");
+        if(comments.size() == 0)
+        {
+            System.out.println("\tNo comments");
+        }else
+        {
+            for(int i=0;i<comments.size();i++)
+            {
+                System.out.println("\t"+comments.get(i));
+            }
+        }
     }
-
     @Override
     public String toString() {
         return null;
