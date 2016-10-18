@@ -47,7 +47,7 @@ public class TestPost1 {
         f1.getPost(2).addComment(""); f1.getPost(2).addlike();
         f1.getPost(2).addComment("Huewei P9 rules!!!"); f1.getPost(2).addlike();
 
-        // display a photo post
+        // display a photo
         f1.getPost(2).display();
 
         f1.getPost(3).addlike(); f1.getPost(3).addlike(); f1.getPost(3).addlike();
