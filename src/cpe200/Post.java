@@ -69,7 +69,7 @@ public class Post {
         System.out.print(this.likes + " people like this.\n");
         for(int i = 0 ; i<this.comments.size() ; i++)
         {
-            System.out.print(this.comments.get(i)+"\n");
+            System.out.print("  " + this.comments.get(i)+"\n");
         }
 
 

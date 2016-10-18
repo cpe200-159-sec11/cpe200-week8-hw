@@ -22,9 +22,13 @@ public class MessagePost extends Post {
         System.out.print(super.username + " (Posted: " + super.timestamp + ")\n");
         System.out.print("Message: " + this.message + "\n");
         System.out.print(super.likes + " people like this.\n");
+        if(super.comments.size() == 0)
+        {
+            System.out.print("  No comments." + "\n");
+        }
         for(int i = 0 ; i<super.comments.size() ; i++)
         {
-            System.out.print(super.comments.get(i)+"\n");
+            System.out.print("  " +super.comments.get(i)+"\n");
         }
 
 

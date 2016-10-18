@@ -56,9 +56,13 @@ public class PhotoPost extends Post {
         System.out.print(this.filename + "\n");
         System.out.print("Caption: " + this.caption + "\n");
         System.out.print(super.likes + " people like this.\n");
+        if(super.comments.size() == 0)
+        {
+            System.out.print("  No comments." + "\n");
+        }
         for(int i = 0 ; i<super.comments.size() ; i++)
         {
-            System.out.print(super.comments.get(i)+"\n");
+            System.out.print("  " + super.comments.get(i)+"\n");
         }
 
     }
